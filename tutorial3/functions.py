@@ -98,31 +98,51 @@ print("\nList3: ", list3, "\nList3_results: ", list3_results)
 
 # Can you see how functions are wildly useful? It can shrink an intense set of instructions 
 # into a line that you can use over and over! 
-# To fully empahsize how useful this is, here's a real world example of a function I wrote.
+# To fully empahsize how useful this is, here's a real world example of a function that someone could write. 
 # While this is not exactly analogous to how I use it, this should serve as a good example. 
 # Note that all data in this case is simulated - the underlying principles are the same however.
+# Note that for this example, I've fully documented and written out the function. This is an example 
+# of how a function may appear in a production-ready library. You may choose to adopt this style 
+# if you plan on using your functions more than once and don't want to have to remember much (I hihgly recommend it!)
+# and to get yourself into the swing of things. Not documenting or using some of these checks is fine 
+# if you wish to use it for your own project or files. 
 
 IP_Adresses = ["4.118.80.67", "129.190.24.233", "193.60.5.186", "208.206.49.111", "224.30.118.112", "247.9.35.179", 
                 "255.34.162.196", "249.116.89.183", "129.109.225.94", "111.150.77.61"]
 
 def check_range(ip):
-    ip = int(ip.split(".")[0])
+    '''
+        Author: Rashed Rifat 
+        Determines the class of an IP Address according to conventional guidelines. 
+        
+        Args:
+            ip (str): the IP Address to determine the class of 
+        Returns:
+            str:    a letter representing the class of the IP Address 
 
+    '''
+
+    # Check to see if ip is of class str and formatted properly 
+    if not isinstance(ip, str):
+        raise TypeError(str(ip) + "is of type " + str(type(ip)) + " not str")
+
+    try:
+        ip = int(ip.split(".")[0])
+    except:
+        raise ValueError("IP not formatted properly. Please ensure it is in XXX.XXX.XXX format.")
+
+    # Use if statemented to determine the class of the IP Adress 
+    # A switch statement (to be covered later) may have been more advisiable 
     if (ip >= 1 and ip <= 9) or (ip >= 11 and ip <= 126):
         return "A"
-
     elif (ip >= 128 and ip <= 171) or (ip >= 173 and ip <= 191):
         return "B"
-
     elif (ip >= 192 and ip <= 195) or (ip >= 197 and ip <= 223):
         return "C"
-    
     elif (ip >= 224 and ip <= 247):
         return "D"
-    
     elif (ip >= 248 and ip <= 255):
         return "E"
-    
     else:
         raise ValueError("Incorrectly formatted IP." )
 
@@ -132,4 +152,4 @@ def check_range(ip):
 
 print("\n\n")
 for ip in IP_Adresses:
-    print("IP ", ip, " is of class ", check_range(ip))
+    print("IP", ip, "is of class", check_range(ip))
