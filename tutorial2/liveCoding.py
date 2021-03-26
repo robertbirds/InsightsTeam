@@ -4,3 +4,15 @@
 
 value_list = [1,2,3,2,3,3,4,5,6,4,5,6,4,5,6,4,5,6,5,6,6]
 value_counts = dict()
+
+unique_values = []
+for val in value_list:
+
+    if val not in unique_values:
+        value_counts[val] = 1
+        unique_values.append(val)
+    else:
+        value_counts[val] += 1
+
+print("uniqe_values: ", unique_values)
+print("value_counts dictonayr: ", value_counts)

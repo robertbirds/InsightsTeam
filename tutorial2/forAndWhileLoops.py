@@ -7,8 +7,9 @@
 #A while loop in python runs until the loop criteria is false
 #ex1:
 n = 1
-while(n <= 5):
-    print(n)
+while n <= 5:
+    #print(n)
+    #print("Print Statement")
     n += 1
 
 #Output:
@@ -16,6 +17,7 @@ while(n <= 5):
 #2
 #3
 #4
+#5 
 
 #This loop prints ut every number from 1 to 5
 
@@ -24,9 +26,10 @@ while(n <= 5):
 
 #Suppose we had a list 
 State1 = [1,3,4,5,3,4,6]
+
 i = 0
 while(i < len(State1)):
-    print(State1[i])
+    #print(State1[i])
     i += 1
 
 #Output:
@@ -41,8 +44,11 @@ while(i < len(State1)):
 #For loop
 
 #for loops loop through values from start to finish from an object
-for i in State1:
-    print(i)
+State1 = [1,3,4,5,3,4,6]
+
+for whatever in State1:
+    #print(whatever)
+    pass
 
 #Output:
 #1
@@ -56,8 +62,9 @@ for i in State1:
 #Looping through a dictionary using a for loop:
 
 stateDict = {'a':1,'b':3,'c':4,'d':5,'e':3,'f':4,'g':6}
-for i in stateDict:
-    print(stateDict[i])
+
+for key in stateDict:
+    print(stateDict[key])
 
 #Output:
 #1
