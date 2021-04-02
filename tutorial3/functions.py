@@ -17,6 +17,7 @@ print(mystery)
 # Can you see how this would be really annoying and troublesome to code? Not to mention inefficient?
 # This is where functions come in! Simply put, a function is a series of instructions to be applied 
 # to a set of inputs, which then returns an output. It is not all to dissimilar to a function in mathmatics! 
+
 # To define a function we use the def keyword, followed by the name of the function, open parentheses, 
 # the parameters we want the function to accept, closed parentheses, followed by a semicolon. 
 # While this takes a bit to type out, it is much easier to see in code! 
@@ -30,11 +31,11 @@ def demo_function(param1, param2):
 # Let's see it in action. To call a function, we simply write the name of the function, followed by the parameters we want to
 # pass to it. 
 
-demo = demo_function(1,2)
-print(demo)
+demo = demo_function(10,7)
+print("Demo: ", demo)
 
 # In this case, we see that demo is 0. Exactly what we expect since the demo_function only return 0, no matter the 
-# output. Let's say we want to add the inputs we give to the demo_function. How would we do that then?
+# inputs. Let's say we want to add the inputs we give to the demo_function. How would we do that then?
 # Well, in this case, we have to manipulate the function inputs in the body of our function and then return them!
 # NOTE: EXTREMELY IMPORTANT --> SCOPE!
 #   Function parameters only exist in the function itself and does not affect anything outside of it! 
@@ -79,7 +80,8 @@ def mystery_func(aList, to_compare):
         if elem > to_compare:
             to_return.append(elem)
     
-    return to_return.sort()
+    to_return.sort()
+    return to_return
 
 # Examine the function above. How is it more robust, or more useful, than the process we did in the beginning? 
 # Let's use it and see what happens! 
