@@ -1,0 +1,15 @@
+{
+    "model" : "crv", 
+    "make" : "honda",
+    "miles": 60000, 
+    "insurance": "StateFarm",
+    "color": "red",
+    "internals" : {
+        "engine" : "400cc",
+        "num_of_cylinders" : 4,
+        "num_of_wheels" : 4
+    },
+    "exterior": {
+        "wood" : "redoak"
+    }
+}

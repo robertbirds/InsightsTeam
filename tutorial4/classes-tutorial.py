@@ -17,7 +17,7 @@ class car():
     def describe(self):
         description = f'''
             This is a {self.color} {self.model_} with {self.miles} on it. 
-            The car has a monthly insurance rate of {self.insurance_payment}. 
+            The car has a monthly insurance rate of ${self.insurance_payment}. 
         ''' 
         return description
 
@@ -83,6 +83,7 @@ car_1 = car("Honda", "Black", 1000)
 print(car_1.model_)
 print(car_1.color)
 print(car_1.miles)
+print("------")
 
 # Awesome! But another great part of classes is that we can also have class functions or functions that 
 # are specific to a class. They either do someting with the class fields, with an input variable we give, 
@@ -91,13 +92,16 @@ print(car_1.miles)
 # some more info. Let's check it out! 
 
 print(car_1.describe())
+print("------")
 
 # Now we have a description! Isn't that exciting? We can scale this method of makign cars and methods to hundreds 
 # of millions of data points in a neat and organied manner. It's quite exciting! 
 # However, we can also pass in parameters or values to our cars as well. Let's see an example of that@
 
-print(car_1.drive(100))
+car_1.drive(100)
+print(car_1.miles)
 print(car_1.describe())
+print("------")
 
 # We can see that after we've "driven" the care an addional 100 miles, the description of the car changes and its 
 # insurance rate goes up proprotinally. Note that we did not have to change or modify these values, the functiona 

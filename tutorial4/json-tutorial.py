@@ -34,6 +34,7 @@ jsonFile.close()
 # the file. 
 id = complexJSON["ID"]
 print("ID: ", id)
+print("type: ", complexJSON["type"])
 
 
 # A JSON structure works similar to a dictonary so we can use 
@@ -43,7 +44,10 @@ print("ID: ", id)
 # What complexJSON["type"] does is give us access to the type dictonary.
 # As this is still a dictonary we can use the [] operator to gain access to its values 
 sequence = complexJSON["type"]["sequence"]
+binary = complexJSON["type"]["binary"]
 print("sequence: ", sequence)
+print("binary: ", binary)
+exit()
 
 # We quickly went past some JSON methods so lets explore them a little bit more here. 
 # What does json.loads (pronounched load-s) do?
