@@ -1,18 +1,20 @@
 '''
+
 # If, Else and Elif statements
 # What is a conditional statement?
 # It tells a program to execute different actions depending on whether the condition is true or false
 
 #Background
 
-#Boolean value: a value that is either true or false
+#Boolean value: a value that is either true or false    
+    # x = 3 
+    # y = 2 
     # x > 4
-    # X> y
-    # z = (1+x)
+    # x > y
 
 #Logical Oporators: and, or, and not
 
-##'If' Statement: Prints results when one of the conditions is true or false
+## St'If'atement: Prints results when one of the conditions is true or false
 if <expr>:
     <statement>
 
@@ -36,11 +38,13 @@ else:
 #Note: Remember that indentation plays a key role and defines blocks.
 #The 'if' and 'else' statements must be on the same vertical line.
 
-##'ELIF' Statement: used when the third possibility has an the outcome.
+##'ELIF' Statement: used when the third possibility or a second condition has an the outcome.
 if x < y:
     Statements_a
 elif x > y:
     Statments_b
+elif x == y:
+    print("c")
 else:
     Statements_c
 
@@ -52,7 +56,6 @@ else:
 '''
 
 # Let's take a look at some examples! 
-
 a = 5
 b = 10
 
@@ -61,13 +64,16 @@ if a == 15:
     print("a is 5!")
 
 # What about now? 
-if a < b:
+if 10 * a < b:
     print("a is less than b!")
 else:
     print("a is not less than b!")
 
 # How about this one? 
-if b > a:
+a = 6
+b = 11
+
+if b-10 > a:
     print("b is greater than a")
 elif b == 10:
     print("b == 10")
