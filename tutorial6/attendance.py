@@ -1,5 +1,5 @@
 # Please execute the below code to ensure that you are added to our records! 
-# This is mandatory to continuing in this team and this will be how we keep track
+# This is mandatory to continuing on this team and this will be how we keep track
 # of your progress. Please execute this file by replacing your name in this file. 
 import requests
 import json
