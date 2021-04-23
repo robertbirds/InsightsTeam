@@ -8,19 +8,24 @@
 #we could store them in a dictionary
 
 #Example:
-State1 = {'County1' : 1, 'County2' : 2, 'County1' : 3 }
+State1 = {'County1' : 1, 'County2' : 2, 'County3' : 3 }
 #This is our dictionary. Instead of using index to call 
 #variables we use key values for dictionaries.
 
 #If we wanted to know the number for County1, we can get
 #this by using
-State1['County1']
+print(State1['County1'])
 #this will return the number for County1 which is 1
 
 #If we wanted to change the value of County1 from 1 to 2
 #we could do this by
 State1['County1'] = 2
-#State1 will now look like {'County1' : 2, 'County2' : 2, 'County1' : 3 }
+print(State1)
+#State1 will now look like {'County1' : 2, 'County2' : 2, 'County3' : 3 }
+
+State1["New_Key"] = "Demo Number"
+State1[12] =  State1["County3"] + 5
+print(State1)
 
 #more python dictionary methods:
 #https://www.w3schools.com/python/python_dictionaries_methods.asp
